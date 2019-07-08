@@ -1,0 +1,41 @@
+@0
+
+
+@1
+^: MOV UP, ACC
+   JEZ $
+   MOV ACC, RIGHT
+   SWP
+   ADD 1
+   SAV
+   JMP ^
+$: SWP
+   MOV ACC, DOWN
+   MOV DOWN, NIL
+
+@2
+
+
+@3
+
+
+@4
+MOV UP, RIGHT
+MOV RIGHT, UP
+
+@5
+   MOV LEFT, ACC
+   JEZ $
+&: MOV UP, DOWN
+   SUB 1
+   JNZ &
+$: MOV 0, LEFT
+   MOV 0, DOWN
+
+@6
+
+
+@7
+MOV UP, DOWN
+
+@8

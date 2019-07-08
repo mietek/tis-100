@@ -1,0 +1,43 @@
+@0
+
+
+@1
+MOV UP, DOWN
+
+@2
+
+
+@3
+
+
+@4
+MOV UP, RIGHT
+
+@5
+   MOV LEFT, ACC
+   JEZ =
+   MOV 0, ACC
+   JMP $
+=: SWP
+   ADD 1
+$: SAV
+   MOV ACC, DOWN
+
+@6
+
+
+@7
+
+
+@8
+
+
+@9
+^: MOV UP, ACC
+   SUB 2
+   JGZ 1
+   MOV 0, DOWN
+   JMP ^
+1: MOV 1, DOWN
+
+@10

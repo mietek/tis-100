@@ -1,0 +1,62 @@
+@0
+^: JGZ 1
+   MOV UP, ACC
+   JEZ 0
+   MOV 1, RIGHT
+   JMP ^
+1: MOV UP, ACC
+0: MOV 0, RIGHT
+
+@1
+^: JGZ 1
+   MOV UP, ACC
+   JEZ 0
+   MOV LEFT, NIL
+   MOV 2, RIGHT
+   JMP ^
+1: MOV UP, ACC
+0: MOV LEFT, RIGHT
+
+@2
+^: JGZ 1
+   MOV UP, ACC
+   JEZ 0
+   MOV LEFT, NIL
+   MOV RIGHT, NIL
+   MOV 3, DOWN
+   JMP ^
+1: MOV UP, ACC
+0: SAV
+   MOV LEFT, ACC
+   ADD RIGHT
+   MOV ACC, DOWN
+   SWP
+
+@3
+^: JGZ 1
+   MOV UP, ACC
+   JEZ 0
+   MOV 4, LEFT
+   JMP ^
+1: MOV UP, ACC
+0: MOV 0, LEFT
+
+@4
+
+
+@5
+
+
+@6
+MOV UP, DOWN
+
+@7
+
+
+@8
+
+
+@9
+MOV UP, DOWN
+
+@10

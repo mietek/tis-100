@@ -1,0 +1,68 @@
+@0
+
+
+@1
+MOV UP, DOWN
+
+@2
+
+
+@3
+
+
+@4
+
+
+@5
+^: MOV UP, ACC
+   MOV ACC, RIGHT
+   JEZ 0
+   SUB 100
+   MOV ACC, DOWN
+   MOV ACC, DOWN
+   MOV ACC, DOWN
+   JMP ^
+0: MOV 0, DOWN
+
+@6
+^: MOV LEFT, ACC
+   MOV ACC, DOWN
+   JEZ ^
+   MOV ACC, DOWN
+   MOV ACC, DOWN
+
+@7
+
+
+@8
+^: MOV UP, ACC
+   JEZ $
+   SWP
+   SAV
+   SUB UP
+   JGZ >
+   MOV UP, NIL
+   JMP ^
+>: MOV UP, ACC
+   SAV
+   JMP ^
+$: SWP
+   ADD 100
+   MOV ACC, DOWN
+
+@9
+^: MOV UP, ACC
+   JEZ $
+   SWP
+   SAV
+   SUB UP
+   JLZ <
+   MOV UP, NIL
+   JMP ^
+<: MOV UP, ACC
+   SAV
+   JMP ^
+$: SWP
+   MOV ACC, DOWN
+
+@10
